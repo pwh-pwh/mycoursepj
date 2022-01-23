@@ -20,3 +20,6 @@ eureka:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.coderpwh.system.domain
+logging:
+  level:
+    com.coderpwh.system.mapper: trace
