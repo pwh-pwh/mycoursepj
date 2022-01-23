@@ -1,6 +1,4 @@
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.coderpwh.server.domain
+
 logging:
   level:
     com.coderpwh.system.mapper: trace
@@ -11,3 +9,6 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: 12345678
     username: pwh_course
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.coderpwh.server.domain
