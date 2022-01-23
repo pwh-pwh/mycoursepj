@@ -8,6 +8,10 @@ spring:
           uri: lb://system
           predicates:
             - Path=/system/**
+        - id: business
+          uri: lb://business
+          predicates:
+            - Path=/business/**
 
 server:
   port: 9000
