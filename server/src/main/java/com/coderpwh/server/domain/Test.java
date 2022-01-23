@@ -1,4 +1,4 @@
-package com.coderpwh.system.domain;
+package com.coderpwh.server.domain;
 
 public class Test {
     private Integer id;

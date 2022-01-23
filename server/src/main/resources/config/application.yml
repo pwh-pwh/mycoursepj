@@ -1,0 +1,13 @@
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.coderpwh.server.domain
+logging:
+  level:
+    com.coderpwh.system.mapper: trace
+
+spring:
+  datasource:
+    url: jdbc:mysql://159.75.211.245:3306/course?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 12345678
+    username: pwh_course

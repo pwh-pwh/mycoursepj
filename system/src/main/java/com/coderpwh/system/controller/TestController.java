@@ -1,9 +1,9 @@
 package com.coderpwh.system.controller;
 
-import com.coderpwh.system.domain.Test;
-import com.coderpwh.system.service.TestService;
+
+import com.coderpwh.server.domain.Test;
+import com.coderpwh.server.service.TestService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

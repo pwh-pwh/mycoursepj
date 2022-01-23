@@ -1,6 +1,8 @@
-package com.coderpwh.system.mapper;
+package com.coderpwh.server.mapper;
 
-import com.coderpwh.system.domain.Test;
+
+
+import com.coderpwh.server.domain.Test;
 
 import java.util.List;
 
