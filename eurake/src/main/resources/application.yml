@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eurake
+server:
+  port: 8761
+
+eureka:
+  client:
+#    拉取注冊信息
+    fetch-registry: false
+#    注册到注册中心
+    register-with-eureka: false
