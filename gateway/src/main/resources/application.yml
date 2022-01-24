@@ -13,6 +13,13 @@ spring:
           predicates:
             - Path=/business/**
 
+#              配置geteway网关
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
 server:
   port: 9000
 eureka:
