@@ -29,11 +29,11 @@ public class BusinessController {
     }
 
     @PostMapping("/save")
-    public ChapterDto saveChapter(@RequestBody ChapterDto chapterDto) {
+    public ResponseDto<ChapterDto> saveChapter(@RequestBody ChapterDto chapterDto) {
         log.debug("{}",chapterDto);
         chapterService.save(chapterDto);
         ResponseDto<ChapterDto> chapterDtoResponseDto = new ResponseDto<>();
         chapterDtoResponseDto.setContent(chapterDto);
-        return chapterDto;
+        return chapterDtoResponseDto;
     }
 }
