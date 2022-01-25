@@ -2,6 +2,7 @@ package com.coderpwh.business.controller.admin;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.coderpwh.server.dto.ChapterDto;
+import com.coderpwh.server.dto.ResponseDto;
 import com.coderpwh.server.service.ChapterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,15 +21,19 @@ public class BusinessController {
     private ChapterService chapterService;
 
     @RequestMapping("/list")
-    public Page<ChapterDto> chapterList(@RequestBody Page<ChapterDto> page) {
-
-        return chapterService.findAllChapter(page);
+    public ResponseDto chapterList(@RequestBody Page<ChapterDto> page) {
+        chapterService.findAllChapter(page);
+        ResponseDto<Page<ChapterDto>> pageResponseDto = new ResponseDto<>();
+        pageResponseDto.setContent(page);
+        return pageResponseDto;
     }
 
     @PostMapping("/save")
     public ChapterDto saveChapter(@RequestBody ChapterDto chapterDto) {
         log.debug("{}",chapterDto);
         chapterService.save(chapterDto);
+        ResponseDto<ChapterDto> chapterDtoResponseDto = new ResponseDto<>();
+        chapterDtoResponseDto.setContent(chapterDto);
         return chapterDto;
     }
 }
