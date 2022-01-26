@@ -15,6 +15,8 @@ import javax.annotation.Resource;
 @RequestMapping("/admin/chapter")
 public class BusinessController {
 
+    public static final String BUSINESS_NAME = "大章";
+
     private static final Logger log = LoggerFactory.getLogger(BusinessController.class);
     @Resource
     private ChapterService chapterService;

@@ -40,6 +40,10 @@
         <groupId>com.coderpwh</groupId>
         <artifactId>server</artifactId>
     </dependency>
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+    </dependency>
 </dependencies>
 
 </project>
