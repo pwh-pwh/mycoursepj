@@ -7,8 +7,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.util.Date;
 
 /**
-    * 小节
-    */
+ * 小节
+ */
 @TableName(value = "`section`")
 public class Section {
     /**
