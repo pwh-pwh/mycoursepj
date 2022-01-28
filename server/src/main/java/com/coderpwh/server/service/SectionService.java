@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.coderpwh.server.util.UuidUtil;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.coderpwh.server.domain.Section;
@@ -28,9 +29,12 @@ public class SectionService extends ServiceImpl<SectionMapper, Section> {
 
     public void insert(Section section) {
         section.setId(UuidUtil.getShortUuid());
+        section.setCreateAt(new Date());
+        section.setUpdatedAt(new Date());
         sectionMapper.insert(section);
     }
     public void updateBySectionId(Section section) {
+        section.setUpdatedAt(new Date());
         sectionMapper.updateById(section);
     }
 
